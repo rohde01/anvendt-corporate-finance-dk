@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+\usepackage[danish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[round]{natbib}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlist{itemsep=0.2em, topsep=0.3em}
+
+\title{\textbf{Indfri, refinansiér eller lad den løbe?}\\[0.4em]
+  \large Ørsteds kapitalomkostning efter rekapitaliseringen og beslutningen om hybridkapitalen i 2027\\[0.8em]
+  \normalsize Disposition til Seminar: Anvendt Corporate Finance}
+\author{Carl-Emil Rohde og Mathilde Sanbeck\\[0.2em]
+  \small Vejleder: Mikkel Godt Gregersen}
+\date{25. september 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Problemfelt}
+
+Ørsteds kapitalstruktur har været under pres i to år. I august 2025 opgav selskabet frasalget af Sunrise Wind og annoncerede en fortegningsemission på 60 mia.\ kr. Få dage senere nedjusterede S\&P ratingen til BBB$-$, og den amerikanske regering standsede byggeriet af Revolution Wind. Emissionen blev gennemført i oktober 2025 med 15 nye aktier for hver 7 eksisterende til kurs 66,60 kr. Sammen med salget af halvdelen af Hornsea~3 til Apollo har det givet Ørsted en helt anden balance. Ved udgangen af første halvår 2026 var den rentebærende nettogæld nede på 22 mia.\ kr., og FFO i forhold til justeret nettogæld var 44,6 pct.\ mod et mål på over 30 pct.
+
+Aktien ligger i dag omkring 83 pct.\ under toppen i 2021, når kurserne korrigeres for emissionen. Markedet prissætter altså Ørsted som en langt mere risikabel virksomhed end det forsyningsselskab, aktien tidligere blev handlet som. En beta estimeret på historiske data vil derfor sandsynligvis undervurdere den risiko, investorerne i dag kræver betaling for.
+
+Det mest interessante er hybridkapitalen. Ørsted har fem udestående hybridobligationer for i alt ca.\ 21 mia.\ kr. Den ældste er på 600 mio.\ EUR med en kupon på 1,75 pct.\ og kan indfries fra 9. september til 9. december 2027. Indfries den ikke, nulstilles kuponen til den femårige EUR-swaprente plus 195,2 basispoint. Med den nuværende swaprente giver det ca.\ 5,55 pct. Til sammenligning blev Ørsteds seneste hybrid udstedt i 2024 til 259 basispoint over swaprenten, og dengang havde selskabet en højere rating end i dag. Økonomisk kan det derfor være billigere at lade obligationen løbe videre end at indfri og refinansiere den. Markedskutymen er dog, at udstederen indfrier ved første mulighed, og Ørsted har selv refinansieret alle sine tidligere hybrider i god tid.
+
+Beslutningen er blevet mere åben, efter at Ørsted i juli 2026 opsagde samarbejdet med S\&P. Det var netop S\&P's egenkapitalandel på hybriden, der skulle bortfalde ved nulstillingen i 2027, og Ørsteds erklærede hensigt om at erstatte hybrider, der indfries, er formuleret med udgangspunkt i S\&P. Moody's og Fitch, som nu er de eneste to bureauer, giver fortsat hybriden 50 pct.\ egenkapitalandel uden et tilsvarende bortfald i 2027.
+
+\section{Problemformulering}
+
+\begin{quote}
+\textit{Hvad er Ørsteds kapitalomkostning efter rekapitaliseringen i 2025, og bør Ørsted indfri, refinansiere eller lade hybridobligationen på 600 mio.\ EUR løbe videre ved nulstillingen i december 2027?}
+\end{quote}
+
+Problemformuleringen besvares gennem tre underspørgsmål:
+
+\begin{enumerate}
+  \item Hvad er Ørsteds WACC, når beta, gældsomkostning, hybridkapitalens omkostning og vægtene i kapitalstrukturen estimeres konsistent? Hvordan forholder den sig til de diskonteringsrenter, Ørsted selv bruger i sine nedskrivningstest, og til den kapitalomkostning, som markedskursen implicit afspejler?
+  \item Er Ørsted overkapitaliseret efter emissionen og frasalgene, og hvilken rolle bør hybridkapital spille, når staten ejer 50,1 pct.\ og kun to ratingbureauer vurderer selskabet?
+  \item Hvad koster hver af de tre muligheder? Det drejer sig om indfrielse med en ny hybrid, indfrielse finansieret med likviditet eller seniorgæld, og at lade obligationen løbe videre til nulstillet kupon. Omkostningen skal omfatte den direkte finansieringsomkostning, effekten på ratingnøgletallene og omdømmet på hybridmarkedet.
+\end{enumerate}
+
+\section{Modtager og forventet anbefaling}
+
+Opgaven er skrevet til Ørsteds CFO og Group Treasury. Anbefalingen skal sige konkret, hvad Ørsted bør gøre med hybriden i 2027, og hvilket spænd for kapitalomkostningen selskabet bør lægge til grund for sine investeringsbeslutninger. Analysen er også relevant for obligationsinvestorer, der skal prissætte sandsynligheden for, at hybriden bliver indfriet.
+
+Vores udgangshypotese er, at det er økonomisk billigere at lade hybriden løbe videre. Omkostningen ved at bryde markedskutymen kan dog være større for et selskab, der netop er blevet rekapitaliseret og fortsat har brug for adgang til kapitalmarkedet. Opgaven skal kvantificere den afvejning.
+
+\section{Afgrænsning}
+
+\begin{itemize}
+  \item Vi laver ikke en fuld DCF-værdiansættelse. Strategi og regnskab indgår kun, hvor det er nødvendigt for kapitalomkostningen, ratingnøgletallene og pengestrømmene bag hybridbeslutningen. Det fylder højst en fjerdedel af opgaven.
+  \item Afvigelsen fra markedsværdien forklares gennem den implicitte kapitalomkostning i markedskursen frem for gennem en egen kursberegning.
+  \item Den amerikanske politiske risiko behandles som risikoscenarier og ikke som en selvstændig analyse.
+  \item Vi bruger data til og med 30. september 2026. Senere begivenheder, herunder Q3-rapporten den 5. november, kommenteres i diskussionen, hvis de ændrer konklusionen.
+  \item Hybriden med første call i 2027 er i fokus. De fire øvrige hybrider og seniorobligationerne bruges som sammenligningsgrundlag.
+  \item Den skattemæssige behandling af hybridkuponer tager udgangspunkt i prospektet. Vi går ikke i dybden med skatteretten.
+\end{itemize}
+
+\section{Teori og litteratur}
+
+Opgaven bygger på fire dele af litteraturen.
+
+\textbf{Kapitalstruktur og kapitalomkostning.} Udgangspunktet er \citet{modigliani1958, modigliani1963} og trade-off-teorien i den dynamiske form hos \citet{leland1994}. \citet{graham2001} viser, hvordan CFO'er i praksis vægter rating og finansiel fleksibilitet, og \citet{koller2020} er grundlaget for den praktiske WACC-estimation.
+
+\textbf{Beta og risiko.} \citet{blume1971} bruges til at diskutere justering af beta. \citet{pastor2013} giver en ramme for, hvordan politisk usikkerhed prissættes, hvilket er centralt for Ørsteds amerikanske projekter. \citet{gebhardt2001} bruges til at udlede den implicitte kapitalomkostning i markedskursen.
+
+\textbf{Emission og gældsoverhæng.} Emissionen analyseres som et svar på gældsoverhæng med udgangspunkt i \citet{myers1977}. \citet{myers1984} og \citet{eckbo1992} forklarer, hvorfor en fortegningsemission med stor rabat kan være det rationelle valg.
+
+\textbf{Rating, statsejerskab og hybridkapital.} \citet{kisgen2006} viser, at virksomheder tilpasser kapitalstrukturen efter ratinggrænser. \citet{bongaerts2012} bruges til at vurdere, hvad det betyder at gå fra tre til to ratingbureauer. \citet{borisova2011} belyser statsejerskabets effekt på gældsomkostningen. Litteraturen om optimal indfrielse af obligationer hos \citet{longstaff1994} og \citet{king2000} danner rammen om hybridbeslutningen, suppleret med Moody's og Fitch' metoder for egenkapitalandel.
+
+\section{Metode}
+
+\begin{itemize}
+  \item \textbf{Beta.} Vi estimerer beta på ugentlige og månedlige afkast fra 2016 til 2026 mod MSCI Europe og OMXC GI med rullende vinduer. Et strukturelt brud omkring rekapitaliseringen testes med en Chow-test \citep{chow1960}. Som alternativ beregnes en peer-beta ud fra aktivbetaer for RWE, EDP Renováveis, Iberdrola og SSE, som gearres op til Ørsteds målkapitalstruktur.
+  \item \textbf{Risikofri rente og markedsrisikopræmie.} Vi bruger ECB's AAA-rentekurve i EUR, fordi kronen er bundet til euroen, og holder valuta og løbetid konsistente. Markedsrisikopræmien vurderes ud fra implicitte, historiske og surveybaserede estimater.
+  \item \textbf{Gældsomkostning.} Den udledes af effektive renter på Ørsteds seniorobligationer og sammenholdes med ratingbaserede spænd. Vi skelner mellem den lovede og den forventede rente.
+  \item \textbf{Hybridkapital.} Omkostningen beregnes både som rente til første call og som rente under antagelse af nulstilling. Hybriden behandles som en blanding af gæld og egenkapital i WACC.
+  \item \textbf{Vægte.} Vi sammenligner den faktiske nettogæld med en målkapitalstruktur, fordi den store likviditet er øremærket til investeringer i 2026 og 2027.
+  \item \textbf{Markedsværdi.} Den implicitte kapitalomkostning i aktiekursen og analytikernes konsensus sammenholdes med vores WACC og med Ørsteds egne diskonteringsrenter, som for de amerikanske aktiver er 6,00 til 7,00 pct.\ efter skat.
+  \item \textbf{Hybridbeslutningen.} De tre muligheder sammenlignes på nutidsværdi under scenarier for swaprente og nyt udstedelsesspænd. Effekten på FFO i forhold til justeret nettogæld holdes op mod bureauernes grænser. Omdømmeomkostningen vurderes ud fra tidligere udeladte indfrielser, blandt andet Santanders AT1-obligation i 2019 og Aroundtowns hybrider i 2023.
+\end{itemize}
+
+\section{Data}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}XXl@{}}
+\toprule
+\textbf{Data} & \textbf{Kilde} & \textbf{Status} \\
+\midrule
+Ørsteds aktiekurser 2016 til 2026 & Nasdaq Nordic & Tilgængelig \\
+Peers og indeks & Yahoo Finance, MSCI, Nasdaq & Tilgængelig \\
+Rentekurver & ECB, Bundesbank, Nationalbanken & Tilgængelig \\
+Regnskaber, prospekter og obligationsvilkår & Ørsteds investorside & Tilgængelig \\
+Ratingmeddelelser & Moody's og Fitch & Pressemeddelelser \\
+Markedsrisikopræmie og faktorer & Damodaran, Fernandez, Kenneth French & Tilgængelig \\
+Kurser på hybrider og seniorobligationer & Bloomberg eller LSEG & Mangler adgang \\
+CDS-spænd & Bloomberg eller LSEG & Mangler adgang \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Kursdata fra Yahoo Finance er kun delvist korrigeret for emissionen og giver et fejlagtigt afkast på $-$44,9 pct.\ den 8. september 2025. Vi bruger derfor Nasdaq Nordics kurser, som er korrigeret med den korrekte faktor på ca.\ 1,8, og lægger udbytter til fra årsrapporterne. Hvis vi ikke får adgang til Bloomberg, beregner vi hybridernes effektive rente ud fra børskurser fra Börse Frankfurt og obligationsvilkårene.
+
+\section{Foreløbig struktur}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Afsnit} & \textbf{Normalsider} \\
+\midrule
+1. Introduktion, problemformulering og afgrænsning & 1,5 \\
+2. Casen: Ørsted fra 2021 til 2026 & 2,0 \\
+3. Teori og litteratur & 3,5 \\
+4. Metode og data & 2,0 \\
+5. Kapitalomkostning: beta, gæld, hybrid og WACC & 5,0 \\
+6. Kapitalstruktur og rating & 3,0 \\
+7. Hybridbeslutningen & 3,5 \\
+8. Markedsværdi og diskussion & 1,5 \\
+9. Konklusion og anbefaling & 0,5 \\
+\midrule
+\textbf{I alt} & \textbf{22,5} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Tidsplan}
+
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Tidspunkt} & \textbf{Aktivitet} \\
+\midrule
+25. september & Disposition \\
+30. september & Aftalepapir og data cut-off \\
+Uge 40 og 41 & Dataindsamling, herunder Bloomberg \\
+Uge 42 til 44 & Beta, gældsomkostning og WACC \\
+Uge 45 & Hybridanalyse og gennemgang af Q3-rapporten \\
+Uge 46 og 47 & Diskussion, konklusion og redigering \\
+En uge før præsentation & Upload af præsentationsudgave \\
+3. og 7. december & Præsentationer \\
+20. december & Endelig aflevering \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Spørgsmål til vejleder}
+
+\begin{enumerate}
+  \item Er hybridbeslutningen en tilstrækkeligt finansiel og afgrænset vinkel, eller bør WACC-delen fylde mere?
+  \item Er det i orden at undlade en fuld DCF, når afvigelsen fra markedsværdien i stedet forklares gennem den implicitte kapitalomkostning?
+  \item Bør WACC vægtes med den faktiske nettogæld eller med en målkapitalstruktur, når likviditeten er midlertidigt høj?
+  \item Har Økonomisk Institut en Bloomberg-terminal, vi kan booke til at hente obligationskurser og CDS-spænd?
+\end{enumerate}
+
+\bibliographystyle{agsm}
+\bibliography{../litteratur}
+
+\end{document}

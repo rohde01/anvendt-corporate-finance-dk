@@ -24,3 +24,6 @@ venv/
 
 # Miljøvariabler
 .env
+
+# Claude
+CLAUDE.md
